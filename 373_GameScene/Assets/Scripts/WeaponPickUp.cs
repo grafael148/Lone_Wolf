@@ -5,7 +5,10 @@ using UnityEngine;
 public class WeaponPickUp : MonoBehaviour
 {
     public Transform WeaponPos;
-    public float distance = 10f;
+
+    // distance of the raycast
+    public float distance = 8f;
+
     GameObject currentWeapon;
     GameObject wp;
 
@@ -15,17 +18,23 @@ public class WeaponPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // runs the raycast
         CheckWeapons();
+
         if (canGrab)
         {
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                pickUp();
+
+                /*
                 if (currentWeapon != null)
                 {
                     drop();
 
                     pickUp();
-                }
+                } 
+                */
             }
         }
 
@@ -40,7 +49,7 @@ public class WeaponPickUp : MonoBehaviour
         }
     }
 
-    private void CheckWeapons()
+    private void CheckWeapons() // this code checks to see if the player collides with a weapon.
     {
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position,Camera.main.transform.forward,out hit, distance))
@@ -48,6 +57,8 @@ public class WeaponPickUp : MonoBehaviour
             if (hit.transform.tag == "WeaponPickUP")
             {
                 Debug.Log("PickUPWeapon");
+
+                // enables the player to grab the weapon.
                 canGrab = true;
                 wp = hit.transform.gameObject;
             }
