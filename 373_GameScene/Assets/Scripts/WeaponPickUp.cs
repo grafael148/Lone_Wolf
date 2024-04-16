@@ -7,12 +7,12 @@ public class WeaponPickUp : MonoBehaviour
     public Transform WeaponPos;
 
     // distance of the raycast
-    public float distance = 8f;
+    public float distance = 5f;
 
     GameObject currentWeapon;
     GameObject wp;
 
-    bool canGrab;
+    public bool canGrab;
   
 
     // Update is called once per frame
@@ -25,16 +25,22 @@ public class WeaponPickUp : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                pickUp();
+               // pickUp();
 
-                /*
+               
+                // checks if there's a weapon currently equipped or held by the player
                 if (currentWeapon != null)
                 {
                     drop();
 
-                    pickUp();
+                    //pickUp();
                 } 
-                */
+                
+                // picks up the weapon
+                if (Input.GetKeyDown(KeyCode.E) && canGrab)
+                {
+                    pickUp();
+                }
             }
         }
 
