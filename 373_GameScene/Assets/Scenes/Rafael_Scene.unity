@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7031927}
   - component: {fileID: 7031926}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 78692983}
   - component: {fileID: 78692982}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bullet_Tag
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 727292506}
   - component: {fileID: 727292505}
   m_Layer: 0
-  m_Name: Gun (1)
+  m_Name: rifle
   m_TagString: WeaponPickUP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1005631157}
   - component: {fileID: 1005631161}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Health
   m_TagString: HealthPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1153566302}
   - component: {fileID: 1153566307}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: Magnum
   m_TagString: WeaponPickUP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,8 +986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affe9abb1cdad0144bd4437fc8896416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 0
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &1908528321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 1908528322}
   - component: {fileID: 1908528327}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Test_Dummy
   m_TagString: Enemy_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
