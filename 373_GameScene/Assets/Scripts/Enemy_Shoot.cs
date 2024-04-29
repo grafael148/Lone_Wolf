@@ -47,7 +47,7 @@ public class Enemy_Shoot : MonoBehaviour
                 Vector3 direction = player.position - transform.position;
                 bulletRig.AddForce(direction * EnemySpeed);
                 bulletTime = timer; // resets timer
-              //Destroy(bulletObj, 5f); // destroy after 5 seconds
+                Destroy(bulletObj, 5f); // destroy after 5 seconds
 
                 isPlayerHit = false;
 

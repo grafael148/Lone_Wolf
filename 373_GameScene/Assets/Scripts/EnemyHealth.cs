@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
         if (maxHealth <= 0)
         {
             Debug.Log("enemy Killed");
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 

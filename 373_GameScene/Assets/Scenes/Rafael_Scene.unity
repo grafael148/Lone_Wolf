@@ -218,6 +218,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &170706011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 23.319069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 23.319069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 23.319069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1398543
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 059dd72076bd6df4e80f879e5b243502, type: 2}
+    - target: {fileID: 919132149155446097, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_Name
+      value: Grenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_TagString
+      value: WeaponPickUP
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7f8c287324977949a13c88271e17e9c, type: 3}
 --- !u!1 &187122504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,11 +1307,11 @@ GameObject:
   - component: {fileID: 1908528325}
   - component: {fileID: 1908528324}
   - component: {fileID: 1908528323}
-  - component: {fileID: 1908528322}
   - component: {fileID: 1908528327}
   - component: {fileID: 1908528329}
   - component: {fileID: 1908528328}
   - component: {fileID: 1908528330}
+  - component: {fileID: 1908528322}
   m_Layer: 0
   m_Name: Test_Dummy
   m_TagString: Enemy_1
@@ -1393,7 +1474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b3931a2af313e4f96961ee965b7e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 2
+  timer: 3
   EnemyBullet: {fileID: 6678754451221368844, guid: ed81dc8b0c0406b469cb2328e995ff87, type: 3}
   spawnPoint: {fileID: 804431652}
   EnemySpeed: 125
