@@ -17,11 +17,13 @@ public class EnemyMovement_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("enemy is moving");
         agent.destination = player.position;
     }
 
     public EnemyMovement_AI(Transform player)
     {
+        
         this.player = player;
         
     }
