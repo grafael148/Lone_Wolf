@@ -1,34 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
-public class _Magnum : MonoBehaviour
+public class SniperRifle : MonoBehaviour
 {
     public Transform bulletSpawn;
     public GameObject bulletPrefab;
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 50f;
     // only shoots when this is set to true.
     private bool isPickedUp = false;
 
-    private int currentAmmo = 7;
-    private int maxAmmo = 7;
+    private int currentAmmo = 4;
+    private int maxAmmo = 4;
 
-    
+
 
     // Update is called once per frame
     void Update()
     {
         if (currentAmmo > 0 && isPickedUp && Input.GetMouseButtonDown(0))
         {
-            Debug.Log ("shoot");
+            Debug.Log("shoot");
             var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawn.forward * bulletSpeed;
             currentAmmo--;
         }
 
         //Reload
-        if ( Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo)
+        if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo)
         {
             Reload();
         }
@@ -56,9 +55,7 @@ public class _Magnum : MonoBehaviour
         if (other.tag == "Player")
         {
             isPickedUp = false;
-            GetComponent <Rigidbody>().isKinematic = false;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
-
-
 }

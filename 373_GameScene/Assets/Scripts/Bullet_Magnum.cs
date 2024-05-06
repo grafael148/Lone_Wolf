@@ -12,9 +12,12 @@ public class Bullet_Magnum : MonoBehaviour
         Destroy(gameObject, bullet_Timer);
     }
 
-    /*private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        //Destroy(collision.gameObject);
-        Destroy(gameObject);
-    } */
+        if (other.tag == "Boundary" ||  other.tag == "Enemy_1")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

@@ -19,4 +19,10 @@ public class EnemyMovement_AI : MonoBehaviour
     {
         agent.destination = player.position;
     }
+
+    public EnemyMovement_AI(Transform player)
+    {
+        this.player = player;
+        
+    }
 }
