@@ -14,6 +14,7 @@ public class _Magnum : MonoBehaviour
     private int currentAmmo = 7;
     private int maxAmmo = 7;
 
+    public Transform attachPoint;
     
 
     // Update is called once per frame
@@ -47,7 +48,9 @@ public class _Magnum : MonoBehaviour
         if (other.tag == "Player")
         {
             isPickedUp = true;
-            GetComponent<Rigidbody>().isKinematic = true;
+            // GetComponent<Rigidbody>().isKinematic = true;
+
+            transform.parent = attachPoint;
         }
     }
 
@@ -56,7 +59,9 @@ public class _Magnum : MonoBehaviour
         if (other.tag == "Player")
         {
             isPickedUp = false;
-            GetComponent <Rigidbody>().isKinematic = false;
+            //GetComponent <Rigidbody>().isKinematic = false;
+
+            transform.parent = null;
         }
     }
 

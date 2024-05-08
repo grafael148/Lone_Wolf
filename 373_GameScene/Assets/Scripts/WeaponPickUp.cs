@@ -79,7 +79,7 @@ public class WeaponPickUp : MonoBehaviour
         currentWeapon = wp;
         currentWeapon.transform.position = WeaponPos.position;
         currentWeapon.transform.parent = WeaponPos;
-        currentWeapon.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+        currentWeapon.transform.localEulerAngles = new Vector3(0f, 180f, 0f);
         currentWeapon.GetComponent<Rigidbody>().isKinematic = true;
 
         //currentWeapon.GetComponent<_Magnum>().enabled = true;
