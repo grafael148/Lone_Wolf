@@ -17,7 +17,7 @@ public class HealthBarTracking : MonoBehaviour
     private int HP;
     [SerializeField]
     private float currenthealth;
-    private int Ammo = 100;
+    private int Ammo = 30;
     private int Grenades = 3;
     [SerializeField]
     private TMP_Text AmmoCounter;
@@ -29,12 +29,19 @@ public class HealthBarTracking : MonoBehaviour
     [SerializeField]
     private GameObject GrenadePoint;
 
+    private bool rifleEquipped = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        Ammo = 100;
+        Ammo = 30;
         Grenades = 3;
         Shootable = true;
+        
+        if (AmmoCounter != null)
+        {
+            AmmoCounter.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -76,5 +83,15 @@ public class HealthBarTracking : MonoBehaviour
         Shootable = true;
     }
 
+    public void assaultRiflePickUp()
+    {
+        rifleEquipped = true;
 
+        if (AmmoCounter != null)
+        {
+            AmmoCounter.gameObject.SetActive(true);
+        }
+
+           
+    }
 }
